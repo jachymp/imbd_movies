@@ -10,7 +10,6 @@ class MovieController extends Controller
     public function index()
     {
         $movies = Movie::orderBy('rating', 'desc')
-                    ->limit(100)
                     ->get();
         
         return view('movie/index', compact('movies'));
