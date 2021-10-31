@@ -9,7 +9,8 @@ class MovieController extends Controller
 {
     public function index()
     {
-        $movies = Movie::orderBy('rating', 'desc')
+        $movies = Movie::select('id', 'name', 'rating')
+                    ->orderBy('rating', 'desc')
                     ->get();
         
         return view('movie/index', compact('movies'));

@@ -49,7 +49,6 @@
                     while(listValue < listEnd) {
                         list.innerHTML += '<div class="movie-list__list-item"><span class="movie-list__rank">' + listValue + '</span>: ' + '<a href="movie/' + movies[listValue - 1]['id'] + '" class="movie-list__title">' + movies[listValue - 1]['name'] + '</a> | ' + movies[listValue - 1]['rating'] + '</div>';
                         listValue++;
-                        console.log(listValue);
                     }
                 }
               
